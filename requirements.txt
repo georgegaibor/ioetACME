@@ -1,0 +1,5 @@
+flake8==4.0.1
+black==22.3.0
+pycodestyle==2.8.0
+pytest==6.2.5
+pytest-assume==2.4.3

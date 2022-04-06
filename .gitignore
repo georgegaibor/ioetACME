@@ -1,0 +1,6 @@
+#Compilation results
+**/__pycache__/
+
+#Environments
+venv/
+
