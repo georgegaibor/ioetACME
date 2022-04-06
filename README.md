@@ -66,8 +66,8 @@ compare objects of this class during testing and sort the employees alphabetical
 
 The data extraction process described above is repeated for every line of the input .txt file in order to build a list of objects
 of the __Employee__ class which __employee_list()__ returns. This list is then sent as an argument to the __match_and_format()__ function which employs 
-the __match_visits_of()__ method to find and print the employees that have matched at the office from all the possible combinations of employees using 
-__f strings__.
+the __match_visits()__ function to find the employees that have matched at the office from all the possible combinations. Once the list has been completely
+iterated through the employee pairs and the number of matches are printed to console  using __f strings__.
 
 ## Architecture
 The solution is structured as shown in the following figure:
