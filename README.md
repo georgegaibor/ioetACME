@@ -54,20 +54,16 @@ with the __dataclass__ decorator to implement __eq__ and other comparison method
 
 
 While the possibility of creating a __Visit__ class was considered to store the day and time frame of a visit in a single object,
-dictionaries were selected as a better way to do this due to the capability to iterate through its keys by default and the fact that readily available 
+dictionaries were selected as a better way to do this due to the capability to iterate through its keys by default and the fact that readily available functions
 in the itertools standard library, like __product__ and __combinations__, could be used without the need for additional definitions. 
 
 
 The created dictionaries were then associated to their corresponding employee using objects of the __Employee__ class. This class
 consists of a name and visits attribute, the name is the string obtained after the initial data extraction while visits is the dictionary
-created through __days_dictionary()__ as previously described. It has a __match_visits_of()__ method that compares the list of visits
-between two employees and returns how many times they have coincided at the office. Additionaly a __eq__ and a __lt__ method were defined to 
+created through __days_dictionary()__ as previously described. Custom __eq__ and __lt__ methods were defined to 
 compare objects of this class during testing and sort the employees alphabetically by their names.
 
-The data extraction process described above is repeated for every line of the input .txt file in order to build a list of objects
-of the __Employee__ class which __employee_list()__ returns. This list is then sent as an argument to the __match_and_format()__ function which employs 
-the __match_visits()__ function to find the employees that have matched at the office from all the possible combinations. Once the list has been completely
-iterated through the employee pairs and the number of matches are printed to console  using __f strings__.
+The data extraction process described above is repeated for every line of the input .txt file in order to build a list of objects of the __Employee__ class which __employee_list()__ returns. This list is then sent as an argument to the __match_and_format()__ function which employs the __match_visits()__ function to find the employees that have matched at the office from all the possible combinations (these were found using the __combinations__ function from the itertools standard library with an __r__ of two to form pairs). Once the list has been completely iterated through the employee pairs and the number of matches are printed to console  using __f strings__.
 
 ## Architecture
 The solution is structured as shown in the following figure:
